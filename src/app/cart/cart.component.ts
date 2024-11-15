@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { KosarService } from '../kosar.service';
 import { Subscription } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-cart',
@@ -12,7 +13,7 @@ export class CartComponent implements OnInit, OnDestroy{
   feliratkozas!:Subscription
   kosar:any
 
-  constructor(private ks:KosarService){
+  constructor(private ks:KosarService, private route:Router){
 
   }
 
@@ -28,6 +29,10 @@ export class CartComponent implements OnInit, OnDestroy{
 
   price(food:any){
     return Number(food.db)*Number(food.ar)
+  }
+
+  leadas(){
+      this.route.navigate(['/leadas'])
   }
 
 }
