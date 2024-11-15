@@ -37,7 +37,6 @@ export class FoodsComponent {
   }
 
   addTetel(food:any, db:any){
-    // console.log(food, "Dara szám:", db)
     this.ks.addFood(food, db)
   }
 

@@ -26,4 +26,8 @@ export class CartComponent implements OnInit, OnDestroy{
     if(this.feliratkozas) this.feliratkozas.unsubscribe()
   }
 
+  price(food:any){
+    return Number(food.db)*Number(food.ar)
+  }
+
 }
