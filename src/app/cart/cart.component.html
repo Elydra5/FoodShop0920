@@ -1,7 +1,7 @@
 <!-- {{kosar|json}} -->
 
-<div class="container">
-    <div *ngFor="let t of kosar" class="row">
+<div class="ms-3 fs-6">
+    <div *ngFor="let t of kosar" class="row d-flex p-2 bd-highlight">
         <div class="col">{{t.nev}}</div>
         <div class="col">{{t.db}}x{{t.mennyiseg}} - {{price(t)}}Ft</div>
     </div>

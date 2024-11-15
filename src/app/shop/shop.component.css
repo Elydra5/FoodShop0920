@@ -1,11 +1,11 @@
 app-foods{
-    width: 80%;
+    width: 90%;
     float: left;
     overflow-y: scroll;
     height: 100vh;
 }
 
 app-cart{
-    width: 20%;
+    width: 10%;
     float: left;
 }

@@ -15,10 +15,21 @@ export class KosarService {
     return this.kosarSub
   }
 
-  addFood(food:any, db:any){
-    food.db=db
-    delete food.leiras
-    this.kosar.push(food)
-    this.kosarSub.next(this.kosar)
+  addFood(food:any, db:Number){
+    if(food.db==null){
+      food.db=db
+      this.kosar.push(food)
+      this.kosarSub.next(this.kosar)
+      return
+    }
+    else{
+      this.kosar.forEach((element:any) => {
+        if(element.id==food.id){
+          element.db=Number(element.db)+Number(db)
+          this.kosarSub.next(this.kosar)
+          return
+        }
+      })
+    }
   }
 }
